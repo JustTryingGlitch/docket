@@ -14,8 +14,9 @@ app.use(express.static(public_dir));
 
 io.on("connection", (client) => {
     console.log("a user has connected")
-    client.on("client_msg", msg => {
-        io.emit("server_msg", msg);
+    client.on("client_msg", (msg, username) => {
+        let message = `${username}: ${msg}`;
+        io.emit("server_msg", message);
     });
     client.on("disconnect", () => console.log("a user has disconnected"))
 });
