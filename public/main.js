@@ -3,7 +3,18 @@ const socket = io();
 const messages = document.querySelector('ul');
 const form = document.getElementById('messageForm');
 const input = document.getElementById("messageBox");
-const username = prompt("Enter Username:")
+const username = function usernameCreator() {
+    let nameOfUser = prompt("Enter Username:");
+    if (nameOfUser.length < 50) {
+        return nameOfUser;
+    }
+    else {
+        usernameCreator();
+    }
+}
+
+
+
 const divBox = document.getElementById("messageContainer");
 
 form.addEventListener("submit", (e) => {
