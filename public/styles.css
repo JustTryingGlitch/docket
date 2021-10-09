@@ -36,4 +36,7 @@ body {
 
 ul>li {
     list-style-type: none;
+    border-bottom: 3px;
+    border-top: 3px;
+    border-color: white;
 }
