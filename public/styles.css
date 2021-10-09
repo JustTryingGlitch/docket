@@ -1,5 +1,5 @@
 body {
-    background-color: skyblue;
+    background-color: rgb(135, 206, 235);
 }
 
 ul {
@@ -11,4 +11,9 @@ li {
     border-top: 3px;
     border-bottom: 3px;
     border-color: rgb(110, 170, 194);
+}
+input {
+    border-radius: 3px;
+    border-style: ridge;
+    border-color: black;
 }
