@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
     <title>Socket</title>
 </head>
 
@@ -13,35 +14,18 @@
     <audio>
         <source src="discord_notif.mp3" type="audio/mpeg">
     </audio>
-    <ul></ul>
-    <form action="">
-        <input placeholder="Message" autocomplete="off">
+
+    <div id="messageContainer">
+        <ul></ul>
+    </div>
+
+    <form id="messageForm" action="">
+        <input placeholder="Message" autocomplete="off" id="messageBox">
     </form>
+
+    <input type="color" id="color_input" value="#87CEEB">
+
     <script src="/socket.io/socket.io.js"></script>
-    <script>
-        const socket = io();
-
-        const messages = document.querySelector('ul');
-        const form = document.querySelector('form');
-        const input = document.querySelector("input");
-        const username = prompt("Enter Username:")
-
-        form.addEventListener("submit", (e) => {
-            e.preventDefault();
-            if (input.value != "") {
-                socket.emit('client_msg', input.value, username)
-                input.value = "";
-            }
-        });
-
-        socket.on('server_msg', (message) => {
-            const item = document.createElement('li');
-            item.textContent = message;
-            messages.appendChild(item)
-            document.querySelector("audio").play();
-            window.scrollTo(0, document.body.scrollHeight);
-        });
-    </script>
 </body>
 
 </html>
