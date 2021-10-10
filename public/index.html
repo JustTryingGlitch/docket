@@ -20,11 +20,16 @@
     </div>
 
     <form id="messageForm" action="">
-        <input placeholder="Message" autocomplete="off" id="messageBox">
+        <input maxlength="501" placeholder="Message" autocomplete="off" id="messageBox">
     </form>
+
+    <div id="charaCount">
+      0 / 501
+    </div>
+
     <div id="customiserMenu">
         <button onclick="menuToggle('block')" id="customMenuButton">Customise!</button>
-        
+
     </div>
     <div id="customMenuPanel">
         <ul>

@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    
+
 }
 
 .scrollbar-hidden::-webkit-scrollbar {
@@ -56,6 +56,13 @@ body {
     outline-width: 5px;
     overflow: hidden;
 }
+
+#charaCount {
+  position: absolute;
+  top: 88%;
+  left: 1%;
+}
+
 
 ul>li {
     list-style-type: none;

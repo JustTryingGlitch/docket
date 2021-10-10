@@ -6,6 +6,8 @@ const form = document.getElementById('messageForm');
 const input = document.getElementById("messageBox");
 const divBox = document.getElementById("messageContainer");
 const username = prompt("Enter username").substr(0, 50)
+const msgLen = document.getElementById('messageForm');
+const counterLen = document.getElementById('charaCount');
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -31,6 +33,22 @@ socket.on('server_msg', (message) => {
     document.querySelector("audio").play();
     divBox.scrollTo(0, divBox.scrollHeight);
 });
+
+// character counting stuff //
+msgLen.addEventListener('input', function (e) {
+    const target = e.target;
+    const maxLength = target.getAttribute('maxlength');
+    const currentLength = target.value.length;
+    // alter counter div //
+    counterLen.innerHTML = `${currentLength} / ${maxLength}`;
+    // reset everything to 0 upon enter keystroke //
+    document.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            counterLen.innerHTML = '0 / 501'
+        }
+    });
+});
+
 
 function menuToggle(state) {
     document.getElementById("customMenuPanel").style.display = state;
