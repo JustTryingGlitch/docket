@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    
 }
 
 .scrollbar-hidden::-webkit-scrollbar {
@@ -16,10 +15,10 @@ body {
 
 #messageBox {
     position: absolute;
-    top: 90%;
-    width: 94%;
+    top: 92%;
+    width: 92%;
     height: 50px;
-    padding-left: 20px;
+    padding-left: 10px;
 }
 /*
 #color_input {
@@ -30,33 +29,45 @@ body {
     width: 4.5%;
 }
 */
-#customiserMenu {
+#customMenuButton {
     position: absolute;
-    left: 95%;
+    left: 93%;
     height: 50px;
-    top: 90%;
-    width: 4.5%;
+    top: 92%;
+    width: 6.5%;
+    background-color: white;
+
 }
 
 #customMenuPanel {
+    list-style-type: none;
     position: absolute;
-    left: 50%;
     top: 50%;
-    border: 5px;
-    border-radius: 0;
+    left: 50%;
+    padding: 0;
+    margin: 0;
     display: none;
+    transform: translate(-50%, -50%);
 }
 
 .show {display: block;}
 
 #messageContainer {
-    height: 86vh;
+    height: 89vh;
     outline-color: black;
     outline-style: solid;
     outline-width: 5px;
     overflow: hidden;
 }
 
-ul>li {
+ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    margin: 0;
+    padding-bottom: 3px;
 }
