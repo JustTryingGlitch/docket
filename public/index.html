@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="main.js" defer></script>
-    <title>Socket</title>
+    <title>Docket</title>
 </head>
 
 <body>
@@ -15,16 +15,24 @@
         <source src="discord_notif.mp3" type="audio/mpeg">
     </audio>
 
-    <div id="messageContainer">
+    <div id="messageContainer" onclick="menuToggle('none')">
         <ul></ul>
     </div>
 
     <form id="messageForm" action="">
         <input placeholder="Message" autocomplete="off" id="messageBox">
     </form>
-
-    <input type="color" id="color_input" value="#87CEEB">
-
+    <div id="customiserMenu">
+        <button onclick="menuToggle('block')" id="customMenuButton">Customise!</button>
+        
+    </div>
+    <div id="customMenuPanel">
+        <ul>
+            <li><input type="color" id="color_input_bg" value="#87CEEB">Background Colour</input></li>
+            <li><input type="color" id="color_input_brdr" value="#000000">Border Colour</input></li>
+            <li><input type="color" id="color_input_txt" value="#000000">Text Colour</input></li>
+        </ul>
+    </div>
     <script src="/socket.io/socket.io.js"></script>
 </body>
 
