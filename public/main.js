@@ -16,8 +16,12 @@ form.addEventListener("submit", (e) => {
 });
 
 setInterval(() => {
-    let color_input = document.getElementById("color_input").value;
+    let color_input = document.getElementById("color_input_bg").value;
     document.body.style.backgroundColor = color_input;
+    let color_input_brdr = document.getElementById("color_input_brdr").value;
+    document.getElementById("messageContainer").style.outlineColor = color_input_brdr;
+    let color_input_txt = document.getElementById("color_input_txt").value;
+    document.body.style.color = color_input_txt;
 }, 200);
 
 socket.on('server_msg', (message) => {
@@ -27,3 +31,7 @@ socket.on('server_msg', (message) => {
     document.querySelector("audio").play();
     divBox.scrollTo(0, divBox.scrollHeight);
 });
+
+function menuToggle(state) {
+    document.getElementById("customMenuPanel").style.display = state;
+  }
