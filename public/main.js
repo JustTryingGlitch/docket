@@ -7,6 +7,8 @@ const divBox = document.getElementById("messageContainer");
 const username = prompt("Enter username").substr(0, 50);
 const inbound = document.getElementById("inbound");
 const outbound = document.getElementById("outbound");
+const msgLen = document.getElementById('messageForm');
+const counterLen = document.getElementById('charaCount');
 
 //sets the color values to what localstorage has
 document.getElementById("color_input_bg").value = localStorage.bgColor;
@@ -46,6 +48,21 @@ socket.on("inbound-res", inbound => {
     inbound.play();
 });
 
+// character counting stuff //
+msgLen.addEventListener('input', function (e) {
+    const target = e.target;
+    const maxLength = target.getAttribute('maxlength');
+    const currentLength = target.value.length;
+    // alter counter div //
+    counterLen.innerHTML = `${currentLength} / ${maxLength}`;
+    // reset everything to 0 upon enter keystroke //
+    document.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            counterLen.innerHTML = '0 / 501'
+        }
+    });
+});
+
 function menuToggle(state) {
     document.getElementById("customMenuPanel").style.display = state;
 }
@@ -55,4 +72,3 @@ function storePreference() {
     localStorage.setItem("brdrColor", document.getElementById("color_input_brdr").value);
     localStorage.setItem("txtColor", document.getElementById("color_input_txt").value);
 }
-
