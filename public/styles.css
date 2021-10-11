@@ -20,48 +20,40 @@ body {
     height: 50px;
     padding-left: 10px;
 }
-/*
-#color_input {
-    position: absolute;
-    left: 95%;
-    height: 50px;
-    top: 90%;
-    width: 4.5%;
-}
-*/
+
 #customMenuButton {
     position: absolute;
     left: 93%;
     height: 50px;
     top: 92%;
     width: 6.5%;
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 7px );
-    -webkit-backdrop-filter: blur( 7px );
+    background: rgba( 255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 7px);
+    -webkit-backdrop-filter: blur( 7px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-
+    border: 1px solid rgba( 255, 255, 255, 0.18);
 }
 
 #customMenuPanel {
     list-style-type: none;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 33%;
+    left: 45%;
     padding: 5px;
     margin: 0;
     display: none;
-    transform: translate(-50%, -50%);
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 7px );
-    -webkit-backdrop-filter: blur( 7px );
+    background: rgba( 255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 7px);
+    -webkit-backdrop-filter: blur( 7px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba( 255, 255, 255, 0.18);
 }
 
-.show {display: block;}
+.show {
+    display: block;
+}
 
 #messageContainer {
     height: 89vh;
@@ -69,6 +61,7 @@ body {
     outline-style: solid;
     outline-width: 5px;
     overflow: hidden;
+    padding: 10px;
 }
 
 ul {
@@ -84,10 +77,10 @@ li {
 }
 
 input {
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 7px );
-    -webkit-backdrop-filter: blur( 7px );
+    background: rgba( 255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 7px);
+    -webkit-backdrop-filter: blur( 7px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba( 255, 255, 255, 0.18);
 }

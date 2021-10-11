@@ -18,6 +18,9 @@ io.on("connection", (client) => {
         let message = `${username}: ${msg}`;
         io.emit("server_msg", message);
     });
+    client.on("inbound-music", inbound => {
+        client.broadcast.emit("inbound-res", inbound);
+    });
     client.on("disconnect", () => console.log("a user has disconnected"))
 });
 
